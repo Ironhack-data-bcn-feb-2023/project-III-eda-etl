@@ -39,15 +39,15 @@ A data pipeline is a series of data processes in which the output of each one is
 
 - We recommend that on the first day of the project kick-off, you find a theme to base your project on, you can start by basing it on what areas you like, here are some examples:
 
-- Gastronomy
-- Health
-- Economy
-- Sports
-- Marketing
-- Aviation
-- Fashion
-- Manufacturing
-- War
+	- Gastronomy
+	- Health
+	- Economy
+	- Sports
+	- Marketing
+	- Aviation
+	- Fashion
+	- Manufacturing
+	- War
 
 Then, within each area there are different topics, for example:
 
