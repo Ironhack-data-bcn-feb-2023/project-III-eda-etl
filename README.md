@@ -24,13 +24,13 @@ A data pipeline is a series of data processes in which the output of each one is
 - Export it in a CSV data file and put it into mySQL.
 	- you can have your data divided in different tables by categories, or you can have a single table.
 - Access the tables or table from python using SQL.
-- Show data that validates the conclusions based on your hypotheses in a file named analysis.ipynb 
+- Show data that validates the conclusions based on your hypotheses in a file named `analysis.ipynb` 
 	- Simply sumarize the data and do some basic statistics (mean, max, min, std, etc.).
-	- Do domain based statistics or data aggregations using groupby().
+	- Do domain based statistics or data aggregations using `groupby()`.
 	- Go nuts with the investigation.
-- Visualize your results (at least one map in your visualizations and several graphs of different types) in a file named visualization.ipynb
+- Visualize your results (at least one map in your visualizations and several graphs of different types) in a file named `visualization.ipynb`
 	- LOTS AND LOTS of plots, of all types and colors.	
-- Encapsulate your code into functions and save them into .py files: make sure you have docstrings
+- Encapsulate your code into functions and save them into `.py` files: make sure you have docstrings
 - Import those functions into your jupyter notebooks and call them (you will substitute your code with your own functions)
 - Work on titles and comments to have a well presented and cohesive story in your notebook
 - Build a compelling story-telling around your findings. Think of your stakeholders and convince them with your conclusions! (Some slides with few text and pretty plots are normally useful).
