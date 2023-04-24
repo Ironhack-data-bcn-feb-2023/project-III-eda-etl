@@ -20,7 +20,7 @@ A data pipeline is a series of data processes in which the output of each one is
 	merging two datasets is difficult, so we recommend you to use several tables using SQL.
 - Decide on 3 hypotheses
 - Explore the data and write down what you have found
-    - you can use: df.describe(), df["column"], etc.
+    - you can use: `df.describe()`, `df["column"]`, etc.
 - Export it in a CSV data file and put it into mySQL.
 	- you can have your data divided in different tables by categories, or you can have a single table.
 - Access the tables or table from python using SQL.
