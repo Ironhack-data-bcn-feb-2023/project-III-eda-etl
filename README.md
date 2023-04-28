@@ -28,7 +28,7 @@ A data pipeline is a series of data processes in which the output of each one is
 	- Simply sumarize the data and do some basic statistics (mean, max, min, std, etc.).
 	- Do domain based statistics or data aggregations using `groupby()`.
 	- Go nuts with the investigation.
-- Visualize your results (at least one map in your visualizations and several graphs of different types) in a file named `visualization.ipynb`
+- Visualize your results (several graphs of different types) in a file named `visualization.ipynb`
 	- LOTS AND LOTS of plots, of all types and colors.	
 - Encapsulate your code into functions and save them into `.py` files: make sure you have docstrings
 - Import those functions into your jupyter notebooks and call them (you will substitute your code with your own functions)
