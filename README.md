@@ -1,6 +1,6 @@
 ![portada](https://github.com/Ironhack-Data-Madrid-Enero-2021/W3-pipelines-project/blob/master/portadaw3.jpg)
 
-# pipelines-project
+# eda-etl-pipeline
 
 ## Overview
 
