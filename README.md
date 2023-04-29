@@ -30,6 +30,16 @@ A data pipeline is a series of data processes in which the output of each one is
 	- Go nuts with the investigation.
 - Visualize your results (several graphs of different types; maybe also a map?) in a file named `visualization.ipynb`
 	- LOTS AND LOTS of plots, of all types and colors.	
+	
+- Important: include a `.sql` files with queries that describe your data to get as many insights as possible. What would you like to look at if this data came from a company? 
+If you had the publications database:
+	- What is the average of books per author?
+	- What are the authors that sold more books last Q3 of last year?
+	- What is the average of books per category?
+	- Out of every stores, what stores sold the most copies on the top 5%?
+	...
+Save the previous queries in a `.sql` file: aggregate, calculate, summarize.
+
 - Encapsulate your code into functions and save them into `.py` files: make sure you have docstrings
 - Import those functions into your jupyter notebooks and call them (you will substitute your code with your own functions)
 - Work on titles and comments to have a well presented and cohesive story in your notebook
