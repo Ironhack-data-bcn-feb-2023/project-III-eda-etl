@@ -1,6 +1,6 @@
 ![portada](https://github.com/Ironhack-Data-Madrid-Enero-2021/W3-pipelines-project/blob/master/portadaw3.jpg)
 
-# W3-pipelines-project
+# pipelines-project
 
 ## Overview
 
