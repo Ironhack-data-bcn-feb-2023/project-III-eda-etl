@@ -1,98 +1,81 @@
-![portada](https://github.com/Ironhack-Data-Madrid-Enero-2021/W3-pipelines-project/blob/master/portadaw3.jpg)
+# PROYECTO 3
+# EFECTOS DEL COVID Y EL TURISMO EN LOS ALQUILERES DE BARCELONA
+# ![Figura 1](Imagenes/../Images/imgreadme.jpg)
 
-# eda-etl-pipeline
+El turismo es uno de los factores que ha generado millonarios ingresos a esta ciudad catalana desde su auge tras los juegos olimpicos en el 92, aproximadamente un promedio 7,45 millones de turistas acuden a la ciudad cada año desde los ultimos 10 años, pero durante y tras la pandemia del COVID-19 Barcelona se vio afectada por cierre de su comercio y actividades causando asi una gran caida en el flujo turistico. 
 
-## Overview
+Como bien se sabe los alquileres en la ciudad son famosos por su altos precios debido a la gran cantidad tanto de estudiantes como de turistas que acuden cada año a la ciudad, en este proyecto veremos como el valor en los alquileres cambiaron tras el estado de alarma y que cambios hubo en su valor promedio antes de la pandemia.
 
-The purpose of this project is to combine the data cleansing techniques used in project number 1, together with extraction techniques (API, WebScrapping), visualization and SQL, as well as modularization and encapsulation in a topic or field that you are passionate about. You will have to find a data source, take it to a database, clean it and analyze it according to three hypotheses that you set at the beginning.
+#  
+## 1. OBJETIVO:
+Intentaremos mostrar que el precio del alquiler en barcelona fluctuo acorde al nivel de turismo en la ciudad
 
-## What is a pipeline?
-A data pipeline is a series of data processes in which the output of each one is the input of the next, forming a chain.
+![Figura 1](Imagenes/../Images/imgreadme2.jpg)
+#
+## 2. ARCHIVOS:
+En la carpeta mycodes se encontrara archivos .ipynb donde se ve los datos limpios y .sql donde podremos ver datos estadisticos del mismo 
 
-## TO DO's 
+## 3. DESARROLLO:
 
-- Decide on a topic you want to work with.
-- Find a data source and collect the data (600+ data is enough).
-	You could find a dataset in kaggle and enrich it with external data (API or web scrapping) or create it yourself.
-	- Get data from an API.
-	Note: The API you use may require authentication via token or oAuth.
-	- Do web scraping with python `beautifulsoup` module.
-	merging two datasets is difficult, so we recommend you to use several tables using SQL.
-- Decide on 3 hypotheses
-- Explore the data and write down what you have found
-    - you can use: `df.describe()`, `df["column"]`, etc.
-- Export it in a CSV data file and put it into mySQL.
-	- you can have your data divided in different tables by categories, or you can have a single table.
-- Access the tables or table from python using SQL.
-- Show data that validates the conclusions based on your hypotheses in a file named `analysis.ipynb` 
-	- Simply sumarize the data and do some basic statistics (mean, max, min, std, etc.).
-	- Do domain based statistics or data aggregations using `groupby()`.
-	- Go nuts with the investigation.
-- Visualize your results (several graphs of different types; maybe also a map?) in a file named `visualization.ipynb`
-	- LOTS AND LOTS of plots, of all types and colors.	
-	
-- Important: include a `.sql` files with queries that describe your data to get as many insights as possible. What would you like to look at if this data came from a company? 
-If you had the publications database:
-	- What is the average of books per author?
-	- What are the authors that sold more books last Q3 of last year?
-	- What is the average of books per category?
-	- Out of every stores, what stores sold the most copies on the top 5%?
-	...
-Save the previous queries in a `.sql` file: aggregate, calculate, summarize.
+El proceso para llegar a un dataset limpio fue el siguiente
+* Importe librerias necesarias
+  
+![Figura 1](Imagenes/../Images/imgreadme4.jpg)
+* Importe dataset de el año 2020, 2021, 2022
+* Concatene estos 3 datasets para tener un unico
+  
+![Figura 1](Imagenes/../Images/imgreadme3.jpg)
+* Cree una columa mas adecuada para mis procesos en formato de fecha
+* limpiar datos irrelavantes para mi investigacion ( €/ metros cuadrato, valores nulos)
+* Converti la columna Preu a float ya the estaba como string
+* Cree graficas para vizualizar los datos de manera mas facil segun distrito 
+* Realize una preuba estadistica para ver si los datos estaban en una serie estacionaria o no
+* Calcule porcetanjes de variacion en los precios
+* Importe data set limpio a SQL donde aplique alguna queries para facilitar la vizualizacion 
 
-- Encapsulate your code into functions and save them into `.py` files: make sure you have docstrings
-- Import those functions into your jupyter notebooks and call them (you will substitute your code with your own functions)
-- Work on titles and comments to have a well presented and cohesive story in your notebook
-- Build a compelling story-telling around your findings. Think of your stakeholders and convince them with your conclusions! (Some slides with few text and pretty plots are normally useful).
+## 4. VISUALIZACIONES:
+GRAFICOS RELEVANTES :
 
-## Suggested ways to get started
+![Figura 1](Imagenes/../Images/img4.jpg)
+* Separe vizualmente los maximos, minimos y media en una linea de tiempo por cada distrito 
 
-- We recommend that on the first day of the project kick-off, you find a theme to base your project on, you can start by basing it on what areas you like, here are some examples:
+![Figura 1](Imagenes/../Images/grafico.jpg)
+* Este grafico muestra la media del precio en alquileres en tota la ciudad de barcelona a lo largo de los 3 años 
 
-	- Gastronomy
-	- Health
-	- Economy
-	- Sports
-	- Marketing
-	- Aviation
-	- Fashion
-	- Manufacturing
-	- War
+## 5. DATOS ESTADISTICOS 
+![Figura 1](Imagenes/../Images/STA.jpg)
 
-Then, within each area there are different topics, for example:
+En general
+* Segun los datos finales podemos ver que los valores siguen una tendencia no estacionaria con un valor de  0.8000437765486774
 
-Within gastronomy we can find topics such as the evolution of gastronomy in Europe and new trends and how it influences the business. Or the best gastronomies in the world and what to consider before setting up a restaurant, etc…
+* El porcentaje de incremento en total en toda la ciudad fue de : 6.79%
 
-- Find the data source, establish whether you want to use an API, do the process by web scraping or use several kaggle tables.
-- Enrich your data with different sources.
-- After you have the data, examine them and try to understand them and adjust them to your hypotheses or change your hypotheses in case new ones have arisen from examining the data.
-- Load your clean data into SQL and perform queries from python.
-- Break the project down into different steps - use the topics covered in the lessons to form a check list, add anything else you can think of that may be wrong with your data set, and then work through the check list.
-- Use the tools in your tool kit - your knowledge of Python, data structures, Pandas, and data wrangling. Work through the lessons in class & ask questions when you need to! Think about adding relevant code to your project each night, instead of, you know... procrastinating.
-- Commit early, commit often, don’t be afraid of doing something incorrectly because you can always roll back to a previous version.
-- Consult documentation and resources provided to better understand the tools you are using and how to accomplish what you want.
+El porcentaje de incremento varia segun el distrito:
+* Ciutat Vella', 4.32%
+* Eixample', 6.12%
+* Sants-Montjuïc', 8.11%
+* Les Corts', 12.47%
+* Sarrià-Sant Gervasi', 11.63%
+* Gràcia', 7.15%
+* Horta-Guinardó', 3.26%
+* Nou Barris', 2.52%
+* Sant Andreu', 9.77%
+* Sant Martí', 16.54%
 
-## How to deliver the project
 
-1. Create a new repo with the name `data-pipeline-project` on your github account (or another name)
-	- Create a README.md file on repo root with project documentation. Make sure to include as much useful information as possible. Someone that finds the README.md should be able to fully get a gist of the project without browsing your files.
-	- Include a `.gitignore`
-	- At least 1 jupyter notebook is required
-	- Create different folders to put your files: data, my-code, images (if necessary) src.
-	- Perform the SQL queries, get the result and upload it to github in a .sql file.
-	- Including your functions in a `src.py` is recommended.
-2. Open an Issue on this repo and paste your own repo's link.
-3. Making a ppt presentation to present your project is highly recommended, but not mandatory.
+## 6. CONCLUSIONES:
+Segun los datos obtenidos tras la limpieza y los calculos realizados vemos que los precios de los alquileres cayeron sobre la mitad del año 2020 el cual aun estaba las secuelas de la pandemia, esta caida continuo fuertemente hasta 1 año mas adelante 2021 donde ya la pandemia estaba casi en su totalidad controlada y el turismo volvio en olas gigantes a la ciudad, y hasta hoy en dia este precio sigue disparandose a niveles extremos
 
-## Links & Resources
+Lo cual corroborra mi hipotesis mencionada al comienzo de la investigacion:
 
-- <https://www.kaggle.com>
-- <https://numpy.org/doc/1.18/>
-- <https://pandas.pydata.org/>
-- https://docs.python.org/3/library/functions.html
-- https://plotly.com/python/
-- https://matplotlib.org/
-- https://seaborn.pydata.org/
-- https://pandas.pydata.org/docs/
-- https://pandas.pydata.org/docs/
-- https://www.w3schools.com/sql/
+El precio de los alquileres esta ligado al flujo de turistas y estudiantes en la ciudad, es un problema que esta generando una burbuja de precios respecto a la vivienda y que los locales en la ciudad se estan viendo bastante afectados.
+
+## 7. RECURSOS:
+https://opendata-ajuntament.barcelona.cat/data/es/dataset
+ -- DATASETS --
+
+https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/alquiler/cataluna/barcelona-provincia/
+-- DATOS ESTADISTICOS -- 
+
+https://es.statista.com/estadisticas/480611/numero-de-turistas-alojados-en-hoteles-barcelona-espana/#:~:text=En%202022%2C%20el%20n%C3%BAmero%20de,de%20siete%20millones%20en%202022.
+-- DATOS ESTADISTICOS --
